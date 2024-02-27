@@ -1,1 +1,1 @@
-![Captura de tela 2024-02-27 180649](https://github.com/DigitalHDR/card-slider-javascript/assets/73972922/515b4f76-c835-4ba2-9b5d-aaac2ea255da)
+![Animação2](https://github.com/DigitalHDR/card-slider-javascript/assets/73972922/312cf99e-40b6-4944-843e-cac28b55ac5e)
