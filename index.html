@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,14 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     />
-    <script src="./main.js"></script>
   </head>
   <body>
     <div class="wrapper">
-      <i class="fa-solid fa-angle-left"></i>
+      <i id="left" class="fa-solid fa-angle-left"></i>
       <ul class="carousel">
         <li class="card">
           <div class="img">
-            <img src="./1.jpg" alt="img1" srcset="" />
+            <img src="./1.jpg" alt="img1" srcset="" dragging="false" />
           </div>
           <div class="textCard">
             <h2>UI</h2>
@@ -26,7 +25,7 @@
         </li>
         <li class="card">
           <div class="img">
-            <img src="./5.jpg" alt="img1" srcset="" />
+            <img src="./2.jpg" alt="img1" srcset="" dragging="false" />
           </div>
           <div class="textCard">
             <h2>Chaewon</h2>
@@ -35,7 +34,25 @@
         </li>
         <li class="card">
           <div class="img">
-            <img src="./4.jpg" alt="img1" srcset="" />
+            <img src="./3.jpg" alt="img1" srcset="" dragging="false" />
+          </div>
+          <div class="textCard">
+            <h2>Sakura</h2>
+            <span>Atriz</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="./4.jpg" alt="img1" srcset="" dragging="false" />
+          </div>
+          <div class="textCard">
+            <h2>Sakura</h2>
+            <span>Atriz</span>
+          </div>
+        </li>
+        <li class="card">
+          <div class="img">
+            <img src="./5.jpg" alt="img1" srcset="" dragging="false" />
           </div>
           <div class="textCard">
             <h2>Sakura</h2>
@@ -43,7 +60,8 @@
           </div>
         </li>
       </ul>
-      <i class="fa-solid fa-angle-right"></i>
+      <i id="right" class="fa-solid fa-angle-right"></i>
     </div>
+    <script src="./main.js"></script>
   </body>
 </html>

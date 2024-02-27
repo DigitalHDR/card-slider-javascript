@@ -4,7 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 body {
   display: flex;
@@ -12,7 +12,7 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: linear-gradient(to left top, #031A9A, #8B53FF);
+  background: linear-gradient(to left top, #031a9a, #8b53ff);
 }
 
 .wrapper {
@@ -32,7 +32,7 @@ body {
   line-height: 50px;
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
   transform: translateY(-50%);
   transition: transform 0.1s linear;
 }
@@ -45,22 +45,41 @@ body {
   right: -22px;
 }
 
-.wrapper .carousel{
+.wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 12px);
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   gap: 16px;
+  overflow-x: auto;
   border-radius: 8px;
+  scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   scrollbar-width: none;
-  overflow: hidden;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel :where(.card, .img) {
   justify-content: center;
   align-items: center;
+}
+
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
 }
 
 .carousel .card {
@@ -80,7 +99,7 @@ body {
 }
 
 .carousel .card .img {
-  background: #8B53FF;
+  background: #8b53ff;
   height: 148px;
   width: 148px;
   border-radius: 50%;
@@ -106,6 +125,18 @@ body {
 }
 
 .carousel .card span {
-  color: #6A6D78;
+  color: #6a6d78;
   font-size: 1.31rem;
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
 }
